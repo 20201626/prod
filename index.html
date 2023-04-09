@@ -1,16 +1,33 @@
+<!DOCTYPE html>
 <html>
 <body>
- 
-<form method="GET" action="formcgi.php">
-이름을 입력하세요 : <input type="text" name="username"><br>
-성별을 입력하세요 : <input type="text" name="sex">
-<input type="submit" value="전송">
-</form>
 <?php
-echo("당신의 이름은 <b>". $_GET["username"]. "</b> 이고.<p>");
-echo("당신의 성별은 <b>". $_GET["sex"]. "</b> 입니다.<p>");
+$num1 = $_POST['num1'];
+$num2 = $_POST['num2'];
+$operator = $_POST['operator'];
+
+switch ($operator) {
+    case "+":
+        $result = $num1 + $num2;
+        break;
+    case "-":
+        $result = $num1 - $num2;
+        break;
+    case "*":
+        $result = $num1 * $num2;
+        break;
+    case "/":
+        if ($num2 == 0) {
+            $result = "Error: division by zero";
+        } else {
+            $result = $num1 / $num2;
+        }
+        break;
+    default:
+        $result = "Error: unsupported operator";
+}
+
+echo "Result: " . $result;
 ?>
- 
 </body>
 </html>
-
