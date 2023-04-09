@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <tilte>피보나치</title>
+</head>
 <body>
-<?php
-$num1 = $_POST['num1'];
-$num2 = $_POST['num2'];
-$operator = $_POST['operator'];
 
-switch ($operator) {
-    case "+":
-        $result = $num1 + $num2;
-        break;
-    case "-":
-        $result = $num1 - $num2;
-        break;
-    case "*":
-        $result = $num1 * $num2;
-        break;
-    case "/":
-        if ($num2 == 0) {
-            $result = "Error: division by zero";
-        } else {
-            $result = $num1 / $num2;
-        }
-        break;
-    default:
-        $result = "Error: unsupported operator";
+<?php
+$n = $_POST['n']; // HTML form에서 POST로 전달된 값을 받습니다.
+
+$fib = array(); // 피보나치 수열을 저장할 배열을 초기화합니다.
+$fib[1] = 1; // 첫 번째 항을 0으로 초기화합니다.
+$fib[2] = 1; // 두 번째 항을 1로 초기화합니다.
+
+echo "피보나치 수열: ";
+echo $fib[1] . " " . $fib[2] . " "; // 첫 번째와 두 번째 항을 출력합니다.
+
+for ($i = 1; $i <= $n; $i++) {
+  $fib[$i + 1] = $fib[$i] + $fib[$i - 1]; // i번째 항을 계산합니다.
+  echo $fib[$i] . " " . $fib[$i + 1] . " " . $fib[$i + 1] / $fib[$i] . " "; // i번째 항을 출력합니다.
 }
 
-echo "Result: " . $result;
 ?>
 </body>
 </html>
