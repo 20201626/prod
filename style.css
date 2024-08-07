@@ -1,0 +1,248 @@
+* {
+  margin: 0px;  /* 마진 초기화 */
+  padding: 0px; /* 패딩 초기화 */
+  box-sizing: border-box; /* 박스 영역은 테두리까지 */
+}
+
+#container {
+  margin-left: 0; /* 왼쪽 정렬 */
+  width: 1000px;  /* 너비 지정 */
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+ul {
+  list-style: none; /* 메뉴 스타일 지정 */
+}
+
+/* 헤더 영역 */
+header {
+  float: left;
+  width: 20%;  /* 너비 */
+  height: 670px;  /* 높이 */
+  background-color: #ccc;
+}
+/* 로고 */
+.logo{
+  float: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* 사이드바 */
+nav{
+  float: left;
+  width: 100%;
+}
+/* 메인메뉴 */
+.mainMenu>li{
+  position: relative; /* 서브메뉴 플로팅 위한 position 설정 */
+}
+.mainMenu>li>a{
+  display: block;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+}
+/* 서브메뉴 */
+.subMenu{
+  display: none;
+  position: absolute; /* 플로팅 위해서 position 설정 */
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  left: 200px;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.subMenu>li{
+  padding: 10px;
+}
+.subMenu>li>a{
+  color: #fff;
+}
+/* 호버 시 애니메이션 설정 */
+.subMenu>li:hover>a{
+  color: #ff5733;
+}
+.mainMenu>li:hover>.subMenu{
+  display: block;
+  animation-name: show;
+  animation-duration: 1s;
+  z-index: 1;
+}
+@keyframes show {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+/* 이미지슬라이드, 컨텐츠, 푸터 영역 */
+.bodyWrap{
+  float: right;
+  width: 790px;
+}
+/* 이미지 슬라이드 */
+#imgSlide{
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+#imgSlide a{
+  position: absolute;
+  transition: all 1s;
+  overflow: hidden;
+}
+img{
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.imgText{
+  position: absolute;
+  top: 40%;
+  left: 38%;
+  margin: -10px -50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 16px 100px;
+  font-weight: bold;
+}
+
+
+/* 콘텐츠 영역 */
+#contents{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between; /* 요소 사이에 일정한 간격으로 가로 정렬 */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#contents>div{
+  width: 33.3%; /* 각 영역 3등분 */
+}
+#contents h4{
+  width: 33%;
+  padding: 6px;
+  background-color: #ff5733;
+  text-align: center;
+  cursor: pointer;
+}
+#contents ul{
+  height: 168px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  font-size: 12px;
+}
+/* 공지사항 */
+#notice{
+  padding-right: 10px;
+}
+#notice li{
+  padding: 13px;
+}
+#notice li:nth-child(even){
+  background-color: rgba(0, 0, 0, 0.05);  /* 짝수번째만 배경색 지정 */
+}
+#notice li span{
+  float: right;
+}
+/* 갤러리 */
+#gallery{
+  padding-right: 10px;
+}
+#gallery ul{
+  display: flex;
+  justify-content: space-around;  /* 요소 주위에 일정한 간격으로 가로 정렬 */
+  align-items: center;
+  padding: 5px;
+}
+/* 바로가기 */
+#direct{
+  background: url("../resource/Contents/direct/direct.jpg") center center;
+  overflow: hidden; /* 넘치는 부분 자르기 */
+	display: flex;
+	justify-content: center;  /* 컨테이너의 중앙으로 가로 정렬 */
+	align-items: center;
+}
+#direct a{
+  background: rgba(255, 87, 51, 0.6);
+  color: #fff;
+  padding: 10px;
+}
+
+
+/* 푸터 영역 */
+footer{
+  width: 100%;
+  height: 100px;
+  background-color: #777;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 20px;
+}
+footer div:nth-child(1){
+  opacity: 0.4;
+}
+footer div:nth-child(2){
+  color: #fff;
+}
+#familySite>select{
+ padding: 8px;
+}
+
+
+/* 모달 영역 */
+#modalWrap{
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#modalWrap.active{
+  display: block;
+}
+.modal{
+  position: relative;
+  width: 450px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(50%);
+  background: #ffffff;
+  border: 1px solid;
+}
+.modal > h1{
+  text-align: left;
+  padding-bottom: 20px;
+}
+.modal > p{
+  padding: 30px;
+  text-align: left;
+}
+.btn{
+  width: 15%;
+  padding: 10px;
+  margin-top: 20px;
+  background: #ff5733;
+  color: #ffffff;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 85%;
+}

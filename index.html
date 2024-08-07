@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- 전체 웹페이지 영역 -->
+  <div id="container">
+    <!-- 헤더 -->
+    <header>
+      <!-- 로고 -->
+      <a class="logo" href="#">
+        <img src="resource/Header/logo.png">
+      </a>
+      <!-- 사이드바 -->
+      <nav>
+        <!-- 메인메뉴 -->
+        <ul class="mainMenu">
+          <li><a href="#">축제소개</a>
+            <!-- 서브메뉴 -->
+            <ul class="subMenu">
+              <li><a href="#">Festival소개</a></li>
+              <li><a href="#">행사장 안내</a></li>
+              <li><a href="#">조직위원회</a></li>
+            </ul>
+          </li>
+          <li><a href="#">예약안내</a>
+            <ul class="subMenu">
+              <li><a href="#">예약하기</a></li>
+              <li><a href="#">예약확인/취소</a></li>
+              <li><a href="#">단체예약문의</a></li>
+            </ul>
+          </li>
+          <li><a href="#">아티스트</a>
+            <ul class="subMenu">
+              <li><a href="#">고릴라즈</a></li>
+              <li><a href="#">메이저 레이저</a></li>
+              <li><a href="#">아우스게인</a></li>
+              <li><a href="#">타임로드</a></li>
+            </ul>
+          </li>
+          <li><a href="#">커뮤니티</a>
+            <ul class="subMenu">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">사진갤러리</a></li>
+              <li><a href="#">영상갤러리</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 이미지 슬라이드, 공지사항, 갤러리, 바로가기, 푸터 묶음 -->
+    <div class="bodyWrap">
+      <!-- 이미지 슬라이드 -->
+      <div id="imgSlide">
+        <a href="#">
+          <img src="resource/[Slide]/img2.jpg">
+          <span class="imgText">Vallery Festival 2</span>
+        </a>
+        <a href="#">
+          <img src="resource/[Slide]/img3.jpg">
+          <span class="imgText">Vallery Festival 3</span>
+        </a>
+        <a href="#">
+          <img src="resource/[Slide]/img1.jpg">
+          <span class="imgText">Vallery Festival 1</span>
+        </a>
+      </div>
+      <!-- 공지사항, 갤러리, 바로가기 묶음 -->
+      <div id="contents">
+        <!-- 공지사항 -->
+        <div id="notice">
+          <h4>공지사항</h4>
+          <ul>
+            <li><a href="#">Vallery Festival 공지사항1<span>2020.11.28</span></a></li>
+            <li><a href="#">Vallery Festival 공지사항2<span>2020.11.28</span></a></li>
+            <li><a href="#">Vallery Festival 공지사항3<span>2020.11.28</span></a></li>
+            <li><a href="#">Vallery Festival 공지사항4<span>2020.11.28</span></a></li>
+          </ul>
+        </div>
+        <!-- 갤러리 -->
+        <div id="gallery">
+          <h4>갤러리</h4>
+          <ul>
+            <li><a href="#"><img src="resource/Contents/gallery/icon1.jpg"></a></li>
+            <li><a href="#"><img src="resource/Contents/gallery/icon2.jpg"></a></li>
+            <li><a href="#"><img src="resource/Contents/gallery/icon3.jpg"></a></li>
+          </ul>
+        </div>
+        <!-- 바로가기 -->
+        <div id="direct">
+          <a href="#">바로가기</a>
+        </div>
+      </div>
+      <!-- 푸터 -->
+      <footer>
+        <!-- 로고 -->
+        <div>
+          <a href="#"><img src="./resource/Footer/footerLogo.png"></a>
+        </div>
+        <!-- 푸터 텍스트 -->
+        <div>
+          COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED
+        </div>
+        <!-- 셀렉트박스 -->
+        <div id="familySite">
+          <select name="familySite">
+            <option value="familySite1">패밀리사이트1</option>
+            <option value="familySite2">패밀리사이트2</option>
+            <option value="familySite3">패밀리사이트3</option>
+          </select>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- 모달 -->
+  <div id="modalWrap">
+    <div class="modal">
+      <h1>타이틀</h1>
+      <hr>
+      <p>가나다라마바사아자차카타파하<br>
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+        0123456789</p>
+        <button class="btn">닫기</button>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
